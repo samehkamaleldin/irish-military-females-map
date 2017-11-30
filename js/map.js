@@ -6,10 +6,11 @@
 // Whindependence clicks the marker, an info window opens.
 
 function initMap() {
-    var dublin = {lat: -8.673180, lng: 51.799761};
+
+    var dublin = {lat: 53.407586, lng: -7.665372};
 
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+        zoom: 8,
         center: dublin
     });
     d3.tsv("female_records.tsv",

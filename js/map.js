@@ -2,7 +2,7 @@
  * Created by sameh on 30/11/2017.
  */
 
-// This example displays a marker at the center of Australia.
+// This eMaritalisplays a marker at the center of Australia.
 // Whindependence clicks the marker, an info window opens.
 
 function initMap() {
@@ -28,8 +28,53 @@ function initMap() {
                     "<br /> Civil war : "+ d.civil +
                     "</div>";
 
+                ContentText = "<h3>"+d.name+"</h3>" +
+                    "<table class=\"table\">" +
+                    "<tbody>"+
+                    "<tr>"+
+                        "<td> Job </td>" +
+                        "<td>" + d.job+ "</td>"
+                    +"</tr>"+
+                    "<tr>"+
+                    "<td> Status </td>" +
+                    "<td>" + d.status+ "</td>"
+                    +"</tr>"+
+                    "<tr>"+
+                    "<td> Address </td>" +
+                    "<td>" + d.address+ "</td>"
+                    +"</tr>"+
+                    "<tr>"+
+                    "<td> Easter rising participation </td>" +
+                    "<td>" + d.rising+ "</td>"
+                    +"</tr>"+
+                    "<tr>"+
+                    "<td> Independence war participation </td>" +
+                    "<td>" + d.independence+ "</td>"+
+                    "<tr>"+
+                    "<td> Civil war participation </td>" +
+                    "<td>" + d.civil+ "</td>"
+                    "</tr>"+
+                    +"</tbody>"
+                    +"</table>"
+                /*
+
+
+
+
+
+                 <th>Email</th>
+                 </tr>
+                 </thead>
+                 <tbody>
+                 <tr>
+                 <td>John</td>
+                 <td>Doe</td>
+                 <td>john@example.com</td>
+                 </tr>
+                 <tr>
+                 */
                 var infowindow = new google.maps.InfoWindow({
-                    content: contentString
+                    content: ContentText
                 });
 
                 var marker = new google.maps.Marker({
